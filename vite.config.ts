@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   base: '/data-schema-records/',
   build: {
-  outDir: 'build', // or 'dist', but match this to your gh-pages -d <folder> command
+  outDir: 'dist', // or 'dist', but match this to your gh-pages -d <folder> command
   },
   resolve: {
     alias: {
