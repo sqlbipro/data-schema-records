@@ -96,9 +96,11 @@ export const parseSqlSchema = (sqlSchema: string): Schema => {
         }
         
         const isPrimaryKey = /PRIMARY\s+KEY/i.test(trimmedLine);
-        const isNullable = !/NOT\s+NULL/i.test(trimmedLine);
+        // A column is nullable if it's not explicitly marked as NOT NULL
+        // Primary keys and foreign keys are never nullable
+        const isNullable = !isPrimaryKey && !/NOT\s+NULL/i.test(trimmedLine);
         
-        console.log(`Column details - Type: ${dataType}, PK: ${isPrimaryKey}, Nullable: ${isNullable}, Min: ${min}, Max: ${max}`); // Debug log
+        console.log(`Column details - Type: ${dataType}, PK: ${isPrimaryKey}, Nullable: ${isNullable}, Min: ${min}, Max: ${max}`);
         
         columns.push({
           name: columnName,
@@ -120,6 +122,8 @@ export const parseSqlSchema = (sqlSchema: string): Schema => {
         column.isForeignKey = true;
         column.referencesTable = fk.referencesTable;
         column.referencesColumn = fk.referencesColumn;
+        // Foreign keys are never nullable
+        column.isNullable = false;
       }
     }
     
