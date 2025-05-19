@@ -55,9 +55,9 @@ const ColumnConfig: React.FC<ColumnConfigProps> = ({ tableName, columns, onColum
                 </TableCell>
                 <TableCell>
                   <div className="text-xs space-y-1">
-                    {column.isPrimaryKey && <div className="bg-blue-100 dark:bg-blue-900 px-2 py-1 rounded">Primary Key</div>}
-                    {column.isForeignKey && <div className="bg-green-100 dark:bg-green-900 px-2 py-1 rounded">Foreign Key</div>}
-                    {column.isNullable && <div className="bg-yellow-100 dark:bg-yellow-900 px-2 py-1 rounded">Nullable</div>}
+                    {column.isPrimaryKey && <div className="bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100 px-2 py-1 rounded">Primary Key</div>}
+                    {column.isForeignKey && <div className="bg-green-100 dark:bg-green-900 text-green-900 dark:text-green-100 px-2 py-1 rounded">Foreign Key</div>}
+                    {column.isNullable && <div className="bg-yellow-100 dark:bg-yellow-900 text-yellow-900 dark:text-yellow-100 px-2 py-1 rounded">Nullable</div>}
                   </div>
                 </TableCell>
                 <TableCell>
