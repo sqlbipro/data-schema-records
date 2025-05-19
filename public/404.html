@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;url=/" />
+    <script>
+      // SPA Fallback: Redirects to root, then React Router takes over
+      var l = window.location;
+      var path = l.pathname.replace(/\/data-schema-records/, "");
+      window.location.replace("/data-schema-records/" + (path ? "#" + path + l.search + l.hash : ""));
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
