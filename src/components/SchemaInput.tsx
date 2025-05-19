@@ -94,7 +94,8 @@ CREATE TABLE comments (
       <CardHeader>
         <CardTitle>Database Schema</CardTitle>
         <CardDescription>
-          Enter your SQL schema to generate test data for ALL columns in ALL tables
+          Enter your SQL schema to generate test data for ALL columns in ALL tables.
+          <b> Note:</b> This tool is not perfect. It may not work for all schemas due to DDL syntax variability.  A sample schema is provided below.
         </CardDescription>
       </CardHeader>
       <CardContent>
