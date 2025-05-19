@@ -18,6 +18,8 @@ jobs:
           node-version: 20
       - run: pnpm install
       - run: pnpm build
+      - name: List build output
+        run: ls -R build
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
