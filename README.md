@@ -1,0 +1,1 @@
+This code creates a web app that creates test data from a DB schema (DDL).  There's a sample schema that can be used to demo the functionality.  The tool respects primary/foriegn key constraints and data types from the DDL when creating the test data. This was a small project that I completed over a weekend for fun to try out Cursor and "vibe coding".
